@@ -3,7 +3,7 @@ require 'pry'
 class Owner
 
   @@all = []
-  attr_accessor :name
+  attr_accessor :name, :pets
   attr_reader :species
 
   def initialize(species)
@@ -60,7 +60,8 @@ class Owner
   end
 
   def sell_pets
-
+    self.pets.each {|type, pets| pets.mood = "nervous"}
+    s
   end
 
   def list_pets
