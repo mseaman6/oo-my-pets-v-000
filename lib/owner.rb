@@ -5,7 +5,6 @@ class Owner
 
   def initialize(species)
     @species = species
-    @pets = {:fishes => [],:cats => [],:dogs => []}
     @@all << self
   end
 
@@ -25,9 +24,13 @@ class Owner
     "I am a #{@species}."
   end
 
+  def pets
+    @pets = {:fishes => [],:cats => [],:dogs => []}
+  end
+
   def buy_fish(fish)
     fish = Fish.new(fish)
-    @pets[:fish] = fish
+    @pets[:fishes] = fish
   end
 
   def feed_fish
