@@ -26,7 +26,7 @@ class Owner
   end
 
   def pets
-    @pets = {:fishes => [],:cats => [],:dogs => []}
+    {:fishes => [],:cats => [],:dogs => []}
   end
 
   def buy_fish(fish)
